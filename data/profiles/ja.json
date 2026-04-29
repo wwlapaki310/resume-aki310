@@ -1,0 +1,10 @@
+{
+  "_comment": "Japanese version – WIP. Add summaries.ja to base.json and override basics fields here.",
+  "meta": {
+    "title": "履歴書 / 職務経歴書",
+    "density": "compact",
+    "summary_key": "ja",
+    "sections_left":  ["summary", "skills", "work"],
+    "sections_right": ["education", "certificates", "awards", "leadership"]
+  }
+}
