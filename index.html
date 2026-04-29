@@ -5,93 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Satoru Akita – AI Solutions Architect Resume</title>
     <style>
-        /* ── Density Variables ──────────────────────────────────────────────── */
-        :root {
-            --col-gap:   30px;
-            --sec-mb:    18px;
-            --li-size:   11pt;
-            --li-lh:     1.4;
-            --li-mb:     3px;
-            --h1-size:   40px;
-        }
-        [data-density="compact"] {
-            --col-gap:   20px;
-            --sec-mb:    12px;
-            --li-size:   10pt;
-            --li-mb:     2px;
-            --h1-size:   34px;
-        }
-        [data-density="tight"] {
-            --col-gap:   14px;
-            --sec-mb:    8px;
-            --li-size:   9.5pt;
-            --li-mb:     1px;
-            --h1-size:   30px;
-        }
+        /* ── Density ────────────────────────────────── */
+        :root { --col-gap:30px;--sec-mb:18px;--li-size:11pt;--li-lh:1.4;--li-mb:3px;--h1-size:40px; }
+        [data-density="compact"] { --col-gap:20px;--sec-mb:12px;--li-size:10pt;--li-mb:2px;--h1-size:34px; }
+        [data-density="tight"]   { --col-gap:14px;--sec-mb:8px; --li-size:9.5pt;--li-mb:1px;--h1-size:30px; }
 
-        /* ── Base ────────────────────────────────────────────────────────────── */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: var(--li-lh); color: #333; background: #f5f5f5; }
-        .container { max-width: 850px; margin: 20px auto; background: white; padding: 40px 50px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        header { text-align: center; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 2px solid #2c3e50; }
-        h1 { font-size: var(--h1-size); color: #2c3e50; margin-bottom: 8px; }
-        .contact { font-size: 12px; color: #555; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .contact a { color: #555; text-decoration: none; }
-        .contact a:hover { color: #2c3e50; }
-        .contact svg { vertical-align: middle; margin-right: 4px; }
-        .content { display: grid; grid-template-columns: 2fr 1fr; gap: var(--col-gap); }
-        .section { margin-bottom: var(--sec-mb); }
-        h2 { font-size: 14px; color: #2c3e50; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1.5px solid #3498db; }
-        .job-group { font-size: 11.5px; font-weight: bold; color: #2c3e50; margin-top: 7px; margin-bottom: 2px; }
-        .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
-        .job-title { font-size: 13.5px; font-weight: bold; color: #2c3e50; text-decoration: underline; }
-        .job-location { font-size: 10px; color: #7f8c8d; font-style: italic; }
-        .job-period { font-size: 10px; color: #7f8c8d; }
-        ul { margin-left: 15px; margin-top: 5px; }
-        li { font-size: var(--li-size); margin-bottom: var(--li-mb); line-height: var(--li-lh); }
-        .skills-grid { display: grid; grid-template-columns: 1fr; gap: 6px; font-size: var(--li-size); }
-        .skill-category { margin-bottom: 4px; }
-        .skill-category strong { color: #2c3e50; }
-        .summary-para { font-size: var(--li-size); line-height: 1.5; }
-        .right-column { font-size: var(--li-size); }
-        .education-item { margin-bottom: 12px; }
-        .degree { font-weight: bold; color: #2c3e50; }
-        .institution { color: #555; font-size: 10pt; }
-        .date { color: #7f8c8d; font-size: 9pt; font-style: italic; }
-        .cert-item, .award-item { margin-bottom: 8px; line-height: 1.3; }
+        /* ── Lang toggle ─────────────────────────────── */
+        .lang-toggle { position:fixed;top:12px;right:16px;display:flex;gap:4px;z-index:100;background:white;padding:4px;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.15); }
+        .lang-toggle button { padding:3px 10px;border:1.5px solid #2c3e50;border-radius:4px;font-size:11px;font-weight:700;cursor:pointer;background:white;color:#2c3e50;transition:all .15s; }
+        .lang-toggle button.active { background:#2c3e50;color:white; }
+        body[data-lang="en"] .ja, body[data-lang="ja"] .en { display:none; }
+        @media print { .lang-toggle { display:none; } }
 
-        /* ── Print ──────────────────────────────────────────────────────────── */
-        @page { size: A4; margin: 5mm 8mm; }
+        /* ── Base ───────────────────────────────────── */
+        * { margin:0;padding:0;box-sizing:border-box; }
+        body { font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:var(--li-lh);color:#333;background:#f5f5f5; }
+        .container { max-width:850px;margin:20px auto;background:white;padding:40px 50px;box-shadow:0 0 10px rgba(0,0,0,.1); }
+        header { text-align:center;margin-bottom:25px;padding-bottom:15px;border-bottom:2px solid #2c3e50; }
+        h1 { font-size:var(--h1-size);color:#2c3e50;margin-bottom:4px; }
+        .subtitle { font-size:13px;color:#555;margin-bottom:8px; }
+        .contact { font-size:12px;color:#555;display:flex;justify-content:center;gap:15px;flex-wrap:wrap; }
+        .contact a { color:#555;text-decoration:none; }
+        .contact svg { vertical-align:middle;margin-right:4px; }
+        .content { display:grid;grid-template-columns:2fr 1fr;gap:var(--col-gap); }
+        .section { margin-bottom:var(--sec-mb); }
+        h2 { font-size:14px;color:#2c3e50;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;padding-bottom:5px;border-bottom:1.5px solid #3498db; }
+        .job-group { font-size:11.5px;font-weight:bold;color:#2c3e50;margin-top:7px;margin-bottom:2px; }
+        .job-header { display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px; }
+        .job-title { font-size:13.5px;font-weight:bold;color:#2c3e50;text-decoration:underline; }
+        .job-location { font-size:10px;color:#7f8c8d;font-style:italic; }
+        .job-period { font-size:10px;color:#7f8c8d; }
+        ul { margin-left:15px;margin-top:5px; }
+        li { font-size:var(--li-size);margin-bottom:var(--li-mb);line-height:var(--li-lh); }
+        .skills-grid { display:grid;gap:6px;font-size:var(--li-size); }
+        .skill-category { margin-bottom:4px; }
+        .skill-category strong { color:#2c3e50; }
+        .summary-para { font-size:var(--li-size);line-height:1.5; }
+        .right-column { font-size:var(--li-size); }
+        .education-item { margin-bottom:12px; }
+        .degree { font-weight:bold;color:#2c3e50; }
+        .institution { color:#555;font-size:10pt; }
+        .date { color:#7f8c8d;font-size:9pt;font-style:italic; }
+        .cert-item,.award-item { margin-bottom:8px;line-height:1.3; }
+        .back-link { display:inline-block;margin-bottom:16px;font-size:12px;color:#7f8c8d;text-decoration:none;border-bottom:1px solid transparent;transition:all .15s; }
+        .back-link:hover { color:#2c3e50;border-color:#2c3e50; }
+
+        /* ── Print ──────────────────────────────────── */
+        @page { size:A4;margin:5mm 8mm; }
         @media print {
-            body { background: white; }
-            .container { max-width: 100%; margin: 0; padding: 0; box-shadow: none; }
-            .section, .job-header, .education-item, .cert-item, .award-item { page-break-inside: avoid; }
-            header { margin-bottom: 7px; padding-bottom: 5px; }
-            h1 { font-size: calc(var(--h1-size) * 0.72); }
-            .contact { font-size: 10px; gap: 10px; }
-            h2 { font-size: 11pt; margin-bottom: 6px; padding-bottom: 3px; }
-            .section { margin-bottom: 7px; }
-            .content { gap: 16px; }
-            li, .summary-para { font-size: calc(var(--li-size) * 0.82); line-height: 1.24; }
-            li { margin-bottom: 1px; }
-            ul { margin-left: 12px; margin-top: 2px; }
-            .skills-grid { gap: 2px; font-size: calc(var(--li-size) * 0.82); }
-            .skill-category { margin-bottom: 2px; }
-            .job-title { font-size: 10pt; }
-            .award-item, .cert-item { margin-bottom: 3px; line-height: 1.2; font-size: calc(var(--li-size) * 0.82); }
-            .education-item { margin-bottom: 5px; }
-            .right-column { font-size: calc(var(--li-size) * 0.82); }
-            .right-column p { margin-bottom: 2px; line-height: 1.18; font-size: calc(var(--li-size) * 0.77); }
-            .job-header { margin-bottom: 2px; }
-            .job-group { font-size: 10pt; margin-top: 6px; margin-bottom: 1px; }
+            body { background:white; }
+            .container { max-width:100%;margin:0;padding:0;box-shadow:none; }
+            .section,.job-header,.education-item,.cert-item,.award-item { page-break-inside:avoid; }
+            .back-link { display:none; }
+            header { margin-bottom:7px;padding-bottom:5px; }
+            h1 { font-size:calc(var(--h1-size)*0.72); }
+            .contact { font-size:10px;gap:10px; }
+            h2 { font-size:11pt;margin-bottom:6px;padding-bottom:3px; }
+            .section { margin-bottom:7px; }
+            .content { gap:16px; }
+            li,.summary-para { font-size:calc(var(--li-size)*0.82);line-height:1.24; }
+            li { margin-bottom:1px; }
+            ul { margin-left:12px;margin-top:2px; }
+            .skills-grid { gap:2px;font-size:calc(var(--li-size)*0.82); }
+            .skill-category { margin-bottom:2px; }
+            .job-title { font-size:10pt; }
+            .award-item,.cert-item { margin-bottom:3px;line-height:1.2;font-size:calc(var(--li-size)*0.82); }
+            .education-item { margin-bottom:5px; }
+            .right-column { font-size:calc(var(--li-size)*0.82); }
+            .right-column p { margin-bottom:2px;line-height:1.18;font-size:calc(var(--li-size)*0.77); }
+            .job-header { margin-bottom:2px; }
+            .job-group { font-size:10pt;margin-top:6px;margin-bottom:1px; }
         }
     </style>
 </head>
-<body>
-<div class="container" data-density="normal">
+<body data-lang="en">
 
+<div class="lang-toggle">
+    <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+    <button id="btn-ja" onclick="setLang('ja')">JA</button>
+</div>
+
+<div class="container" data-density="normal">
+    <a class="back-link" href="../">← <span class="en">All Resumes</span><span class="ja">一覧へ戻る</span></a>
     <header>
-        <h1>Satoru Akita</h1>
+        <h1>
+            <span class="en">Satoru Akita</span>
+            <span class="ja">秋田 悟</span>
+        </h1>
+        <div class="subtitle">
+            <span class="en">AI Solutions Architect / Edge AI Engineer</span>
+            <span class="ja">AIソリューションアーキテクト / エッジAIエンジニア</span>
+        </div>
         <div class="contact">
             <span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="#2c3e50"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
@@ -113,134 +117,182 @@
     </header>
 
     <div class="content">
-        <!-- LEFT COLUMN -->
         <div class="left-column">
-
             <section class="section">
-                <h2>Summary</h2>
-                <ul><li>Software Engineer specializing in edge–cloud integrated AI systems and distributed architectures.</li><li>Experienced in designing and deploying production-grade ML solutions, including LLM-assisted system automation, in edge–cloud environments.</li><li>Strong background in system architecture, multi-camera distributed systems, and enterprise technical collaboration in Japanese and English.</li></ul>
+                <h2><span class="en">Summary</span><span class="ja">概要</span></h2>
+                <ul class="en"><li>Software Engineer specializing in edge–cloud integrated AI systems and distributed architectures.</li><li>Experienced in designing and deploying production-grade ML solutions, including LLM-assisted system automation, in edge–cloud environments.</li><li>Strong background in system architecture, multi-camera distributed systems, and enterprise technical collaboration in Japanese and English.</li></ul>
+                <ul class="ja"></ul>
             </section>
-
             <section class="section">
-                <h2>Skills</h2>
+                <h2><span class="en">Skills</span><span class="ja">スキル</span></h2>
                 <div class="skills-grid">
-                    <div class="skill-category"><strong>Languages:</strong> Python, C/C++, TypeScript, JavaScript, Bash</div>
-                    <div class="skill-category"><strong>ML / AI:</strong> PyTorch, TensorFlow, OpenCV, MediaPipe, Computer Vision, 3D sensing</div>
-                    <div class="skill-category"><strong>Cloud &amp; Infrastructure:</strong> Azure, AWS, GCP, Docker, CI/CD, MLOps pipelines</div>
-                    <div class="skill-category"><strong>Specialization:</strong> Edge-Cloud hybrid systems, Distributed architecture, Data structures &amp; algorithms</div>
-                    <div class="skill-category"><strong>Soft Skills:</strong> Solution Scoping &amp; Feasibility Analysis, On-site Technical Diagnostic &amp; Requirement Engineering, Hardware-Software Integration Strategy, Technical event operations</div>
+                    <div class="skill-category">
+                        <strong class="en">Languages:</strong><strong class="ja">言語:</strong>
+                        Python, C/C++, TypeScript, JavaScript, Bash
+                    </div>
+                    <div class="skill-category">
+                        <strong class="en">ML / AI:</strong><strong class="ja">ML / AI:</strong>
+                        PyTorch, TensorFlow, OpenCV, MediaPipe, Computer Vision, 3D sensing
+                    </div>
+                    <div class="skill-category">
+                        <strong class="en">Cloud &amp; Infrastructure:</strong><strong class="ja">クラウド・インフラ:</strong>
+                        Azure, AWS, GCP, Docker, CI/CD, MLOps pipelines
+                    </div>
+                    <div class="skill-category">
+                        <strong class="en">Specialization:</strong><strong class="ja">専門領域:</strong>
+                        Edge-Cloud hybrid systems, Distributed architecture, Data structures &amp; algorithms
+                    </div>
+                    <div class="skill-category">
+                        <strong class="en">Soft Skills:</strong><strong class="ja">ソフトスキル:</strong>
+                        Solution Scoping &amp; Feasibility Analysis, On-site Technical Diagnostic &amp; Requirement Engineering, Hardware-Software Integration Strategy, Technical event operations
+                    </div>
                 </div>
             </section>
-
             <section class="section">
-                <h2>Experience</h2>
+                <h2><span class="en">Experience</span><span class="ja">職務経歴</span></h2>
                 <div class="job-header">
                     <div>
-                        <span class="job-title">AI Solutions Engineer / Architect</span>
+                        <span class="job-title en">AI Solutions Engineer / Architect</span>
+                        <span class="job-title ja">AIソリューションエンジニア / アーキテクト</span>
                         <span class="job-location"> | Sony Semiconductor Solutions, Tokyo</span>
                     </div>
                     <span class="job-period">Jan 2023 – Present</span>
                 </div>
-                <p class="job-group">Edge AI Sample Applications</p>
-                <ul><li>Led a <strong>6-engineer team</strong> to develop <strong>9 enterprise-grade Edge AI sample apps</strong>, adopted in exhibitions, national demos, and enterprise briefings.</li><li>Released cross-border OSS project <strong>(Raspberry AI Camera)</strong> in collaboration with Lund (Sweden) and Raspberry Pi Foundation.</li><li>Improved cloud integration reliability via REST API–based sample apps with Midokura (Spain).</li></ul>
-                <p class="job-group">Edge–Cloud AI Deployment</p>
-                <ul><li>Led software implementation of distributed AI systems, coordinating <strong>5 engineers and 5 cross-functional members</strong> (sales, electrical, client support).</li><li>Deployed <strong>multi-camera edge–cloud AI systems (10+ cameras per site)</strong> adapting to bandwidth, device compute limits, and environmental constraints.</li><li>Delivered AI solutions: vehicle license plate recognition, digital signage impact measurement, shelf vacancy detection, and in-store traffic heatmap visualization.</li><li>Enabled enterprise AI engagements across <strong>8+ major clients</strong> (logistics, retail, mobility).</li></ul>
-                <p class="job-group">Generative AI &amp; Engineering Productivity</p>
-                <ul><li>Led development of internal <strong>generative AI MCP server</strong>, building prototypes, demos, and a 5-engineer team to release production-ready OSS code.</li><li><strong>Reduced API migration workload by 80%</strong> (V1→V2) using LLM-assisted automation scripts.</li></ul>
+                <p class="job-group en">Edge AI Sample Applications</p>
+                <p class="job-group ja">Edge AI サンプルアプリ開発</p>
+                <ul class="en"><li>Led a <strong>6-engineer team</strong> to develop <strong>9 enterprise-grade Edge AI sample apps</strong>, adopted in exhibitions, national demos, and enterprise briefings.</li><li>Released cross-border OSS project <strong>(Raspberry AI Camera)</strong> in collaboration with Lund (Sweden) and Raspberry Pi Foundation.</li><li>Improved cloud integration reliability via REST API–based sample apps with Midokura (Spain).</li></ul>
+                <ul class="ja"><li></li><li></li><li></li></ul>
+                <p class="job-group en">Edge–Cloud AI Deployment</p>
+                <p class="job-group ja">エッジ–クラウドAI展開</p>
+                <ul class="en"><li>Led software implementation of distributed AI systems, coordinating <strong>5 engineers and 5 cross-functional members</strong> (sales, electrical, client support).</li><li>Deployed <strong>multi-camera edge–cloud AI systems (10+ cameras per site)</strong> adapting to bandwidth, device compute limits, and environmental constraints.</li><li>Delivered AI solutions: vehicle license plate recognition, digital signage impact measurement, shelf vacancy detection, and in-store traffic heatmap visualization.</li><li>Enabled enterprise AI engagements across <strong>8+ major clients</strong> (logistics, retail, mobility).</li></ul>
+                <ul class="ja"><li></li><li></li><li></li><li></li></ul>
+                <p class="job-group en">Generative AI &amp; Engineering Productivity</p>
+                <p class="job-group ja">生成AI・開発生産性</p>
+                <ul class="en"><li>Led development of internal <strong>generative AI MCP server</strong>, building prototypes, demos, and a 5-engineer team to release production-ready OSS code.</li><li><strong>Reduced API migration workload by 80%</strong> (V1→V2) using LLM-assisted automation scripts.</li></ul>
+                <ul class="ja"><li></li><li></li></ul>
                 <div class="job-header" style="margin-top:10px;">
                     <div>
-                        <span class="job-title">Edge AI Embedded Engineer</span>
+                        <span class="job-title en">Edge AI Embedded Engineer</span>
+                        <span class="job-title ja">エッジAI組込みエンジニア</span>
                         <span class="job-location"> | Sony Semiconductor Solutions, Tokyo</span>
                     </div>
                     <span class="job-period">Jan 2020 – Dec 2022</span>
                 </div>
-                <ul><li>Developed SDK and first-generation Edge AI demos for Sony's IMX500, supporting enterprise evaluation and adoption.</li><li>Served as technical lead for <strong>2 exhibition implementations</strong>, overseeing system deployment, live operation, and on-site client briefings.</li><li>Designed and operated full-stack on-premise camera systems (circuit reviews, SoC research, hardware validation), enabling real-world deployment planning.</li></ul>
+                <ul class="en"><li>Developed SDK and first-generation Edge AI demos for Sony's IMX500, supporting enterprise evaluation and adoption.</li><li>Served as technical lead for <strong>2 exhibition implementations</strong>, overseeing system deployment, live operation, and on-site client briefings.</li><li>Designed and operated full-stack on-premise camera systems (circuit reviews, SoC research, hardware validation), enabling real-world deployment planning.</li></ul>
+                <ul class="ja"><li></li><li></li><li></li></ul>
                 <div class="job-header" style="margin-top:10px;">
                     <div>
-                        <span class="job-title">Computer Vision / ML Engineer</span>
+                        <span class="job-title en">Computer Vision / ML Engineer</span>
+                        <span class="job-title ja">コンピュータビジョン / MLエンジニア</span>
                         <span class="job-location"> | Sony Semiconductor Solutions, Tokyo</span>
                     </div>
                     <span class="job-period">Apr 2019 – Dec 2019</span>
                 </div>
-                <ul><li><strong>Pioneered internal ToF ML use case</strong>, independently building <strong>46-class sign language recognition system (98% accuracy, 15 FPS)</strong>; designed depth + facial landmark fusion pipeline from data collection to deployment.</li><li><strong>Led ML development</strong> for ToF + RGB 3D pose estimation system showcased at CES.</li></ul>
+                <ul class="en"><li><strong>Pioneered internal ToF ML use case</strong>, independently building <strong>46-class sign language recognition system (98% accuracy, 15 FPS)</strong>; designed depth + facial landmark fusion pipeline from data collection to deployment.</li><li><strong>Led ML development</strong> for ToF + RGB 3D pose estimation system showcased at CES.</li></ul>
+                <ul class="ja"><li></li><li></li></ul>
             </section>
-
         </div>
 
-        <!-- RIGHT COLUMN -->
         <div class="right-column">
-
             <section class="section">
-                <h2>Education</h2>
+                <h2><span class="en">Education</span><span class="ja">学歴</span></h2>
                 <div class="education-item">
-                    <div class="degree">M.S. in Robotics</div>
-                    <div class="institution">Tohoku University, <span class="date">2017–2019</span></div>
-                    <p style="margin-top:4px;font-size:9.5pt;">MEMS sensors, semiconductor processes, data utilization, machine learning</p>
+                    <div class="degree">
+                        <span class="en">M.S. in Robotics</span>
+                        <span class="ja">修士（工学）・ロボティクス</span>
+                    </div>
+                    <div class="institution">
+                        <span class="en">Tohoku University</span><span class="ja">東北大学</span>,
+                        <span class="date">2017–2019</span>
+                    </div>
+                    <p style="margin-top:4px;font-size:9.5pt;">
+                        <span class="en">MEMS sensors, semiconductor processes, data utilization, machine learning</span><span class="ja">MEMSセンサー・半導体プロセス・データ利活用・機械学習</span>
+                    </p>
                 </div>
                 <div class="education-item">
-                    <div class="degree">B.S. in Mechanical Engineering</div>
-                    <div class="institution">Tohoku University, <span class="date">2013–2017</span></div>
-                    <p style="margin-top:4px;font-size:9.5pt;">Robot contests, Programming work (particle simulation with C++ &amp; OpenGL), Aerospace/Genetic/Control engineering</p>
+                    <div class="degree">
+                        <span class="en">B.S. in Mechanical Engineering</span>
+                        <span class="ja">学士（工学）・機械知能航空工学</span>
+                    </div>
+                    <div class="institution">
+                        <span class="en">Tohoku University</span><span class="ja">東北大学</span>,
+                        <span class="date">2013–2017</span>
+                    </div>
+                    <p style="margin-top:4px;font-size:9.5pt;">
+                        <span class="en">Robot contests, Programming work (particle simulation with C++ &amp; OpenGL), Aerospace/Genetic/Control engineering</span><span class="ja">ロボコン・粒子シミュレーション（C++/OpenGL）・宇宙/遺伝的/制御工学</span>
+                    </p>
                 </div>
             </section>
-
             <section class="section">
-                <h2>Certifications</h2>
+                <h2><span class="en">Certifications</span><span class="ja">資格</span></h2>
                 <div class="cert-item">
-                    <strong>Google Certified Professional - Cloud Architect</strong>
+                    <strong>
+                        <span class="en">Google Certified Professional - Cloud Architect</span><span class="ja">Google Certified Professional - Cloud Architect</span>
+                    </strong>                </div>
+                <div class="cert-item">
+                    <strong>
+                        <span class="en">TensorFlow Developer Certificate</span><span class="ja">TensorFlow Developer Certificate</span>
+                    </strong>                </div>
+                <div class="cert-item">
+                    
+                        <span class="en">AWS Solutions Architect - Associate</span><span class="ja">AWS Solutions Architect - Associate</span>
                 </div>
                 <div class="cert-item">
-                    <strong>TensorFlow Developer Certificate</strong>
+                    
+                        <span class="en">Azure AI Engineer Associate</span><span class="ja">Azure AI Engineer Associate</span>
                 </div>
                 <div class="cert-item">
-                    AWS Solutions Architect - Associate
-                </div>
-                <div class="cert-item">
-                    Azure AI Engineer Associate
-                </div>
-                <div class="cert-item">
-                    Registered Information Security Specialist
+                    
+                        <span class="en">Registered Information Security Specialist</span><span class="ja">情報処理安全確保支援士</span>
                 </div>
             </section>
-
             <section class="section">
-                <h2>Awards &amp; Publications</h2>
+                <h2><span class="en">Awards &amp; Publications</span><span class="ja">受賞・論文</span></h2>
                 <div class="award-item">
                     <strong>SecHack365 (2019)</strong><br>
-                    NICT-sponsored 1-year security hackathon program. Built Fasttext AI to visualize emotional transitions from Twitter posts. Selected for SXSW (Austin) and won an award at the on-site hackathon.
+                    <span class="en">NICT-sponsored 1-year security hackathon program. Built Fasttext AI to visualize emotional transitions from Twitter posts. Selected for SXSW (Austin) and won an award at the on-site hackathon.</span><span class="ja">NICT主催の1年間セキュリティハッカソンプログラム。FasttextでTwitter投稿の感情遷移を可視化するAIを構築。SXSW（オースティン）に選出、現地ハッカソンで受賞。</span>
                 </div>
                 <div class="award-item">
                     <strong>Grand Prize, BIOMD 2015</strong><br>
-                    International biomolecular design competition, Harvard University
+                    <span class="en">International biomolecular design competition, Harvard University</span><span class="ja">国際バイオ分子設計コンテスト（ハーバード大学）にてグランプリ受賞</span>
                 </div>
                 <div class="award-item">
                     <strong>Third Prize, iCAN&#x27;14</strong><br>
-                    Global embedded systems competition – Developed earthquake-responsive bookshelf divider system
+                    <span class="en">Global embedded systems competition – Developed earthquake-responsive bookshelf divider system</span><span class="ja">国際組込みシステムコンテスト – 地震応答型本棚仕切りシステムを開発し3位入賞</span>
                 </div>
                 <div class="award-item">
                     <strong>Published Papers</strong><br>
-                    Froemel, J., Akita, S., et al. (2020). Micromachines (MDPI). Uchida, T., Akita, S., et al. (2017). Small (Wiley)
+                    <span class="en">Froemel, J., Akita, S., et al. (2020). Micromachines (MDPI). Uchida, T., Akita, S., et al. (2017). Small (Wiley)</span><span class="ja">Froemel, J., Akita, S., 他 (2020). Micromachines (MDPI). Uchida, T., Akita, S., 他 (2017). Small (Wiley)</span>
                 </div>
             </section>
-
             <section class="section">
-                <h2>Leadership</h2>
+                <h2><span class="en">Leadership</span><span class="ja">活動・その他</span></h2>
                 <div class="award-item">
-                    <strong>Founding Member</strong><br>
-                    Whole Brain Architecture Young Researchers (Tohoku Chapter, 2018)
+                    <strong><span class="en">Founding Member</span><span class="ja">設立メンバー</span></strong><br>
+                    <span class="en">Whole Brain Architecture Young Researchers (Tohoku Chapter, 2018)</span><span class="ja">全脳アーキテクチャ若手の会 東北支部（2018年設立）</span>
                 </div>
                 <div class="award-item">
-                    <strong>SW Conference/Event Operations</strong><br>
-                    SRE NEXT, Open Source Summit Japan, SecHack365
+                    <strong><span class="en">SW Conference/Event Operations</span><span class="ja">技術カンファレンス運営</span></strong><br>
+                    <span class="en">SRE NEXT, Open Source Summit Japan, SecHack365</span><span class="ja">SRE NEXT・Open Source Summit Japan・SecHack365</span>
                 </div>
                 <div class="award-item">
-                    <strong>Gemini API Hackathon</strong><br>
-                    Mentor in collaboration with Google AI Student Ambassadors
+                    <strong><span class="en">Gemini API Hackathon</span><span class="ja">Gemini APIハッカソン</span></strong><br>
+                    <span class="en">Mentor in collaboration with Google AI Student Ambassadors</span><span class="ja">Google AI Student Ambassadorsと連携してメンター担当</span>
                 </div>
             </section>
-
         </div>
     </div>
 </div>
+
+<script>
+function setLang(l) {
+    document.body.dataset.lang = l;
+    document.getElementById('btn-en').classList.toggle('active', l==='en');
+    document.getElementById('btn-ja').classList.toggle('active', l==='ja');
+    document.documentElement.lang = l;
+    localStorage.setItem('resume-lang', l);
+}
+(function(){ const s = localStorage.getItem('resume-lang'); if (s) setLang(s); })();
+</script>
 </body>
 </html>
