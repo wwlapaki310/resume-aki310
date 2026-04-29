@@ -1,1 +1,115 @@
-
+{
+  "basics": {
+    "name": "Satoru Akita",
+    "name_ja": "秋田 悟",
+    "email": "wwlap24@gmail.com",
+    "phone": "+81-70-4157-2275",
+    "url": "https://wwlapaki310.github.io/",
+    "linkedin": "https://www.linkedin.com/in/satoru-akita-6070a4145/",
+    "github": "https://github.com/wwlapaki310",
+    "blog": "https://akisatooo.hatenablog.com/",
+    "location": "Greater Tokyo Area, Japan",
+    "location_ja": "神奈川県横浜市",
+    "label": "AI Solutions Architect / Edge AI Engineer",
+    "label_ja": "AIソリューションアーキテクト / エッジAIエンジニア"
+  },
+  "i18n": {
+    "en": { "summary": "Summary", "skills": "Skills", "experience": "Experience", "education": "Education", "certifications": "Certifications", "awards": "Awards & Publications", "leadership": "Leadership" },
+    "ja": { "summary": "概要", "skills": "スキル", "experience": "職務経歴", "education": "学歴", "certifications": "資格", "awards": "受賞・論文", "leadership": "活動・その他" }
+  },
+  "summaries": {
+    "general": [
+      "Software Engineer specializing in edge–cloud integrated AI systems and distributed architectures.",
+      "Experienced in designing and deploying production-grade ML solutions, including LLM-assisted system automation, in edge–cloud environments.",
+      "Strong background in system architecture, multi-camera distributed systems, and enterprise technical collaboration in Japanese and English."
+    ],
+    "general_ja": [
+      "エッジ–クラウド統合AIシステムおよび分散アーキテクチャを専門とするソフトウェアエンジニア。",
+      "エッジ–クラウド環境でのLLM活用システム自動化を含む、本番グレードMLソリューションの設計・展開に実績あり。",
+      "システムアーキテクチャ、マルチカメラ分散システム、および日英両言語での法人向け技術協業に強みを持つ。"
+    ],
+    "google": "Solution-oriented AI Engineer with **7+ years of ML/AI experience** and proven expertise as a Forward-Deployed Engineer at Sony Semiconductor Solutions. Specialized in **edge-cloud AI system integration**, enabling customers to design, deploy, and operate intelligent vision systems. Successfully led international partnerships (Raspberry Pi Foundation, Lund AB) and delivered end-to-end AI solutions from requirements gathering to production deployment.",
+    "google_ja": "ソニーセミコンダクタソリューションズにてForward-Deployed Engineerとして**7年以上のML/AI実務経験**を持つ、課題解決志向のAIエンジニア。**エッジ–クラウドAIシステム統合**を専門とし、顧客がインテリジェントビジョンシステムを設計・展開・運用できるよう支援。Raspberry Pi Foundation・Lund AB（スウェーデン）との国際連携をリードし、要件定義から本番展開まで一貫したAIソリューションを提供。"
+  },
+  "skills": [
+    { "name": "Languages",              "name_ja": "言語",            "keywords": ["Python", "C/C++", "TypeScript", "JavaScript", "Bash"] },
+    { "name": "ML / AI",                "name_ja": "ML / AI",         "keywords": ["PyTorch", "TensorFlow", "OpenCV", "MediaPipe", "Computer Vision", "3D sensing"] },
+    { "name": "Cloud & Infrastructure", "name_ja": "クラウド・インフラ","keywords": ["Azure", "AWS", "GCP", "Docker", "CI/CD", "MLOps pipelines"] },
+    { "name": "Specialization",         "name_ja": "専門領域",         "keywords": ["Edge-Cloud hybrid systems", "Distributed architecture", "Data structures & algorithms"] },
+    { "name": "Soft Skills",            "name_ja": "ソフトスキル",     "keywords": ["Solution Scoping & Feasibility Analysis", "On-site Technical Diagnostic & Requirement Engineering", "Hardware-Software Integration Strategy", "Technical event operations"] }
+  ],
+  "work": [
+    {
+      "company": "Sony Semiconductor Solutions",
+      "position": "AI Solutions Engineer / Architect", "position_ja": "AIソリューションエンジニア / アーキテクト",
+      "location": "Tokyo", "startDate": "2023-01", "endDate": null,
+      "groups": [
+        {
+          "name": "Edge AI Sample Applications", "name_ja": "Edge AI サンプルアプリ開発",
+          "highlights": [
+            { "text": "Led a **6-engineer team** to develop **9 enterprise-grade Edge AI sample apps**, adopted in exhibitions, national demos, and enterprise briefings.", "text_ja": "**6名のエンジニアチーム**をリードし、**9本のエンタープライズ向けEdge AIサンプルアプリ**を開発。展示会・全国デモ・企業説明会で採用。", "tags": ["edge-ai","team-lead"] },
+            { "text": "Released cross-border OSS project **(Raspberry AI Camera)** in collaboration with Lund (Sweden) and Raspberry Pi Foundation.", "text_ja": "Lund社（スウェーデン）およびRaspberry Pi Foundationとの国際共同OSS **(Raspberry AI Camera)** をリリース。", "tags": ["oss","international","edge-ai"] },
+            { "text": "Improved cloud integration reliability via REST API–based sample apps with Midokura (Spain).", "text_ja": "Midokura社（スペイン）とのREST APIベースのサンプルアプリ開発によりクラウド連携の信頼性を向上。", "tags": ["cloud","international"] }
+          ]
+        },
+        {
+          "name": "Edge–Cloud AI Deployment", "name_ja": "エッジ–クラウドAI展開",
+          "highlights": [
+            { "text": "Led software implementation of distributed AI systems, coordinating **5 engineers and 5 cross-functional members** (sales, electrical, client support).", "text_ja": "分散AIシステムのソフトウェア実装をリード。**エンジニア5名・営業/電気/サポート等5名**のクロスファンクショナルチームを統括。", "tags": ["team-lead","distributed"] },
+            { "text": "Deployed **multi-camera edge–cloud AI systems (10+ cameras per site)** adapting to bandwidth, device compute limits, and environmental constraints.", "text_ja": "帯域・デバイス性能・環境制約に対応した**マルチカメラ エッジ–クラウドAIシステム（1拠点10台以上）**を複数サイトに展開。", "tags": ["edge-ai","cloud","distributed"] },
+            { "text": "Delivered AI solutions: vehicle license plate recognition, digital signage impact measurement, shelf vacancy detection, and in-store traffic heatmap visualization.", "text_ja": "車両ナンバープレート認識・デジタルサイネージ効果測定・棚欠品検知・店内動線ヒートマップ可視化などのAIソリューションを納入。", "tags": ["cv","solutions"] },
+            { "text": "Enabled enterprise AI engagements across **8+ major clients** (logistics, retail, mobility).", "text_ja": "物流・小売・モビリティ分野の**大手企業8社以上**へのAI導入を実現。", "tags": ["customer","enterprise"] }
+          ]
+        },
+        {
+          "name": "Generative AI & Engineering Productivity", "name_ja": "生成AI・開発生産性",
+          "highlights": [
+            { "text": "Led development of internal **generative AI MCP server**, building prototypes, demos, and a 5-engineer team to release production-ready OSS code.", "text_ja": "社内向け**生成AI MCPサーバー**の開発をリード。プロトタイプ・デモを構築し、5名チームで本番品質のOSSコードをリリース。", "tags": ["genai","oss","team-lead"] },
+            { "text": "**Reduced API migration workload by 80%** (V1→V2) using LLM-assisted automation scripts.", "text_ja": "LLM活用の自動化スクリプトによりAPIマイグレーション（V1→V2）の**作業工数を80%削減**。", "tags": ["genai","automation"] }
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Sony Semiconductor Solutions",
+      "position": "Edge AI Embedded Engineer", "position_ja": "エッジAI組込みエンジニア",
+      "location": "Tokyo", "startDate": "2020-01", "endDate": "2022-12",
+      "highlights": [
+        { "text": "Developed SDK and first-generation Edge AI demos for Sony's IMX500, supporting enterprise evaluation and adoption.", "text_ja": "Sony IMX500向けSDKおよびファーストジェネレーションEdge AIデモを開発。企業評価・採用を支援。", "tags": ["edge-ai","embedded"] },
+        { "text": "Served as technical lead for **2 exhibition implementations**, overseeing system deployment, live operation, and on-site client briefings.", "text_ja": "**展示会2件**の技術リードとしてシステム構築・現場運営・顧客説明を担当。", "tags": ["team-lead","customer"] },
+        { "text": "Designed and operated full-stack on-premise camera systems (circuit reviews, SoC research, hardware validation), enabling real-world deployment planning.", "text_ja": "回路レビュー・SoC調査・ハードウェア検証を含むオンプレミスカメラシステムをフルスタックで設計・運用し、実環境展開計画を策定。", "tags": ["embedded","hardware"] }
+      ]
+    },
+    {
+      "company": "Sony Semiconductor Solutions",
+      "position": "Computer Vision / ML Engineer", "position_ja": "コンピュータビジョン / MLエンジニア",
+      "location": "Tokyo", "startDate": "2019-04", "endDate": "2019-12",
+      "highlights": [
+        { "text": "**Pioneered internal ToF ML use case**, independently building **46-class sign language recognition system (98% accuracy, 15 FPS)**; designed depth + facial landmark fusion pipeline from data collection to deployment.", "text_ja": "社内ToF MLユースケースを**独力で開拓**。データ収集から展開まで深度＋顔ランドマーク融合パイプラインを設計し、**46クラス手話認識システム（正解率98%・15 FPS）**を構築。", "tags": ["cv","ml"] },
+        { "text": "**Led ML development** for ToF + RGB 3D pose estimation system showcased at CES.", "text_ja": "CES展示向けToF + RGB 3D姿勢推定システムの**ML開発をリード**。", "tags": ["cv","ml"] }
+      ]
+    }
+  ],
+  "education": [
+    { "institution": "Tohoku University", "institution_ja": "東北大学", "area": "Robotics", "area_ja": "ロボティクス", "studyType": "M.S.", "studyType_ja": "修士（工学）", "startDate": "2017", "endDate": "2019", "description": "MEMS sensors, semiconductor processes, data utilization, machine learning", "description_ja": "MEMSセンサー・半導体プロセス・データ利活用・機械学習" },
+    { "institution": "Tohoku University", "institution_ja": "東北大学", "area": "Mechanical Engineering", "area_ja": "機械知能航空工学", "studyType": "B.S.", "studyType_ja": "学士（工学）", "startDate": "2013", "endDate": "2017", "description": "Robot contests, Programming work (particle simulation with C++ & OpenGL), Aerospace/Genetic/Control engineering", "description_ja": "ロボコン・粒子シミュレーション（C++/OpenGL）・宇宙/遺伝的/制御工学" }
+  ],
+  "certificates": [
+    { "name": "Google Certified Professional - Cloud Architect", "level": "primary" },
+    { "name": "TensorFlow Developer Certificate", "level": "primary" },
+    { "name": "AWS Solutions Architect - Associate", "level": "secondary" },
+    { "name": "Azure AI Engineer Associate", "level": "secondary" },
+    { "name": "Registered Information Security Specialist", "name_ja": "情報処理安全確保支援士", "level": "secondary" }
+  ],
+  "awards": [
+    { "title": "SecHack365", "date": "2019", "summary": "NICT-sponsored 1-year security hackathon program. Built Fasttext AI to visualize emotional transitions from Twitter posts. Selected for SXSW (Austin) and won an award at the on-site hackathon.", "summary_ja": "NICT主催の1年間セキュリティハッカソンプログラム。FasttextでTwitter投稿の感情遷移を可視化するAIを構築。SXSW（オースティン）に選出、現地ハッカソンで受賞。" },
+    { "title": "Grand Prize, BIOMD 2015", "summary": "International biomolecular design competition, Harvard University", "summary_ja": "国際バイオ分子設計コンテスト（ハーバード大学）にてグランプリ受賞" },
+    { "title": "Third Prize, iCAN'14", "summary": "Global embedded systems competition – Developed earthquake-responsive bookshelf divider system", "summary_ja": "国際組込みシステムコンテスト – 地震応答型本棚仕切りシステムを開発し3位入賞" },
+    { "title": "Published Papers", "summary": "Froemel, J., Akita, S., et al. (2020). Micromachines (MDPI). Uchida, T., Akita, S., et al. (2017). Small (Wiley)", "summary_ja": "Froemel, J., Akita, S., 他 (2020). Micromachines (MDPI). Uchida, T., Akita, S., 他 (2017). Small (Wiley)" }
+  ],
+  "leadership": [
+    { "title": "Founding Member", "title_ja": "設立メンバー", "summary": "Whole Brain Architecture Young Researchers (Tohoku Chapter, 2018)", "summary_ja": "全脳アーキテクチャ若手の会 東北支部（2018年設立）" },
+    { "title": "SW Conference/Event Operations", "title_ja": "技術カンファレンス運営", "summary": "SRE NEXT, Open Source Summit Japan, SecHack365", "summary_ja": "SRE NEXT・Open Source Summit Japan・SecHack365" },
+    { "title": "Gemini API Hackathon", "title_ja": "Gemini APIハッカソン", "summary": "Mentor in collaboration with Google AI Student Ambassadors", "summary_ja": "Google AI Student Ambassadorsと連携してメンター担当" }
+  ]
+}
