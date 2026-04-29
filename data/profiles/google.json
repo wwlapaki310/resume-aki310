@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "title": "AI Solutions Architect – Google Application",
+    "density": "normal",
+    "summary_key": "google",
+    "sections_left":  ["summary", "skills", "work"],
+    "sections_right": ["education", "certificates", "awards", "leadership"],
+    "highlight_tags": ["edge-ai", "cloud", "team-lead", "customer", "oss", "international", "genai", "cv", "ml", "solutions", "enterprise"]
+  },
+  "basics": {
+    "label": "Forward-Deployed AI Engineer | Edge-Cloud Integration Specialist"
+  }
+}
