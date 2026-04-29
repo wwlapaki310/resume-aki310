@@ -1,0 +1,9 @@
+{
+  "meta": {
+    "title": "AI Solutions Architect Resume",
+    "density": "normal",
+    "summary_key": "general",
+    "sections_left":  ["summary", "skills", "work"],
+    "sections_right": ["education", "certificates", "awards", "leadership"]
+  }
+}

@@ -1,85 +1,105 @@
-# Resume Builder
+# resume-aki310 v2 — JSON-driven Resume Builder
 
-英語版履歴書（`index.html` → `resume-english.pdf`）の管理リポジトリ。
-
----
-
-## ファイル構成
-
-```
-resume-builder/
-├── index.html           # 履歴書のソースファイル（編集対象）
-└── resume-english.pdf   # index.html をブラウザからPDF出力したもの
-```
+ポジションごとに文面を調整できる、データ・テンプレート分離型のレジュメ管理システム。
 
 ---
 
-## 仕組み
-
-### `index.html` の構造
-
-外部ライブラリや依存関係は一切なし。1ファイルで完結している。
-
-| 要素 | 内容 |
-|------|------|
-| コンテンツ | HTMLに直接記述 |
-| スタイル | `<style>` タグに CSS を埋め込み |
-| アイコン | インライン SVG（外部ファイル不要） |
-| レイアウト | CSS Grid（左2/右1の2カラム構成） |
-
-**印刷用 CSS の仕組み:**
-
-```css
-@page {
-    size: A4;
-    margin: 5mm 8mm;   /* A4、余白を最小限に */
-}
-
-@media print {
-    /* 画面表示用より小さいフォント、タイトな余白に切り替え */
-    li { font-size: 9pt; }
-    ...
-}
-```
-
-- 画面で見るときは読みやすいサイズで表示
-- 印刷時（PDF出力時）は `@media print` ブロックが適用され、A4 1枚に収まるようフォントサイズ・余白が自動調整される
-
----
-
-### `resume-english.pdf` の生成方法
-
-`index.html` をブラウザで開いてPDF印刷するだけ。
-
-1. `index.html` をブラウザ（Chrome 推奨）で開く
-2. `Ctrl + P`（Mac は `Cmd + P`）で印刷ダイアログを開く
-3. 以下の設定にする：
-   - 送信先: **「PDFに保存」**
-   - 用紙サイズ: **A4**
-   - 余白: **「なし」**（`@page` CSS が余白を制御するため）
-   - 背景のグラフィック: オフでOK
-4. 「保存」→ `resume-english.pdf` として出力
-
----
-
-## 編集方法
-
-履歴書の内容を更新する場合は `index.html` を直接編集し、上記手順で PDF を再生成する。
+## アーキテクチャ
 
 ```
-index.html を編集
-    ↓
-ブラウザで確認（画面表示）
-    ↓
-Ctrl+P → PDFに保存
-    ↓
-resume-english.pdf を上書き保存
+resume-aki310/
+├── data/
+│   ├── base.json              ← ★ 唯一の編集場所（全情報のマスターデータ）
+│   └── profiles/
+│       ├── general.json       ← 汎用版の設定（密度・セクション順・サマリーキー）
+│       ├── google.json        ← Google向け差分（サマリー上書き・タグフィルタ）
+│       └── ja.json            ← 日本語版（WIP）
+├── template/
+│   └── resume.hbs             ← Handlebarsテンプレート（見た目の定義）
+├── dist/                      ← ★ 生成物（CI/CDで自動更新）
+│   ├── resume-general.html
+│   └── resume-google.html
+├── build.js                   ← ビルドスクリプト
+├── package.json
+└── .github/workflows/
+    └── generate.yml           ← data/ or template/ 変更時に自動ビルド
 ```
 
 ---
 
-## リンク
+## クイックスタート
 
-- LinkedIn: https://www.linkedin.com/in/satoru-akita-6070a4145/
+```bash
+npm install
+npm run build              # dist/resume-general.html + dist/resume-google.html を生成
+```
+
+PDF出力（ローカル）:
+```bash
+npm install --include=dev  # Puppeteer をインストール
+npm run build:pdf          # dist/resume-*.pdf を生成
+```
+
+---
+
+## 日常メンテ
+
+### 経歴・スキルを更新する
+
+`data/base.json` **のみ**を編集。次回 `npm run build` で全プロファイルに反映。
+
+### 新しいポジション向けバリアントを追加する
+
+1. `data/profiles/new-company.json` を作成（差分のみ記述）:
+   ```json
+   {
+     "meta": {
+       "title": "SWE Resume – NewCo",
+       "density": "compact",
+       "summary_key": "newco",
+       "highlight_tags": ["edge-ai", "systems-programming", "team-lead"]
+     },
+     "basics": { "label": "Systems Engineer" }
+   }
+   ```
+2. `data/base.json` の `summaries` に `"newco": "..."` を追加
+3. `node build.js --profile=new-company` で確認
+
+### A4に収めたい
+
+`density` を変えるだけ（`template/resume.hbs` や CSS は触らない）:
+- `"density": "normal"`  — デフォルト
+- `"density": "compact"` — フォント0.9x・余白縮小
+- `"density": "tight"`   — フォント0.85x・さらに縮小
+
+---
+
+## highlights のタグ設計
+
+```json
+{ "text": "Deployed multi-camera edge–cloud AI systems...", "tags": ["edge-ai", "cloud", "distributed"] }
+```
+
+`profiles/google.json` の `highlight_tags` に含まれるタグを持つ bullet のみが表示される。  
+タグなしの bullet は常に表示。
+
+利用中のタグ一覧:  
+`edge-ai` / `cloud` / `team-lead` / `customer` / `oss` / `international` / `genai` / `cv` / `ml` / `solutions` / `enterprise` / `embedded` / `hardware` / `distributed` / `automation`
+
+---
+
+## PDF生成（ブラウザ印刷）
+
+```
+dist/resume-*.html をブラウザで開く
+→ Ctrl+P（Mac: Cmd+P）
+→ 送信先: PDFに保存 / 余白: なし / 背景グラフィック: オフ
+```
+
+---
+
+## Links
+
 - Portfolio: https://wwlapaki310.github.io/
 - GitHub: https://github.com/wwlapaki310
+- LinkedIn: https://www.linkedin.com/in/satoru-akita-6070a4145/

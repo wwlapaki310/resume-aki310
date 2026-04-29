@@ -1,0 +1,18 @@
+{
+  "name": "resume-aki310",
+  "version": "2.0.0",
+  "description": "JSON-driven resume builder with profile-based variant support",
+  "scripts": {
+    "build":         "node build.js --profile=general && node build.js --profile=google",
+    "build:general": "node build.js --profile=general",
+    "build:google":  "node build.js --profile=google",
+    "build:ja":      "node build.js --profile=ja",
+    "build:pdf":     "node build.js --profile=general --pdf && node build.js --profile=google --pdf"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.8"
+  },
+  "devDependencies": {
+    "puppeteer": "^22.0.0"
+  }
+}
