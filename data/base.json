@@ -1,0 +1,122 @@
+{
+  "basics": {
+    "name": "Satoru Akita",
+    "email": "wwlap24@gmail.com",
+    "phone": "+81-70-4157-2275",
+    "url": "https://wwlapaki310.github.io/",
+    "linkedin": "https://www.linkedin.com/in/satoru-akita-6070a4145/",
+    "github": "https://github.com/wwlapaki310",
+    "blog": "https://akisatooo.hatenablog.com/",
+    "location": "Greater Tokyo Area, Japan",
+    "label": "AI Solutions Architect / Edge AI Engineer"
+  },
+  "summaries": {
+    "general": [
+      "Software Engineer specializing in edge–cloud integrated AI systems and distributed architectures.",
+      "Experienced in designing and deploying production-grade ML solutions, including LLM-assisted system automation, in edge–cloud environments.",
+      "Strong background in system architecture, multi-camera distributed systems, and enterprise technical collaboration in Japanese and English."
+    ],
+    "google": "Solution-oriented AI Engineer with **7+ years of ML/AI experience** and proven expertise as a Forward-Deployed Engineer at Sony Semiconductor Solutions. Specialized in **edge-cloud AI system integration**, enabling customers to design, deploy, and operate intelligent vision systems. Successfully led international partnerships (Raspberry Pi Foundation, Lund AB) and delivered end-to-end AI solutions from requirements gathering to production deployment."
+  },
+  "skills": [
+    { "name": "Languages",              "keywords": ["Python", "C/C++", "TypeScript", "JavaScript", "Bash"] },
+    { "name": "ML / AI",                "keywords": ["PyTorch", "TensorFlow", "OpenCV", "MediaPipe", "Computer Vision", "3D sensing"] },
+    { "name": "Cloud & Infrastructure", "keywords": ["Azure", "AWS", "GCP", "Docker", "CI/CD", "MLOps pipelines"] },
+    { "name": "Specialization",         "keywords": ["Edge-Cloud hybrid systems", "Distributed architecture", "Data structures & algorithms"] },
+    { "name": "Soft Skills",            "keywords": ["Solution Scoping & Feasibility Analysis", "On-site Technical Diagnostic & Requirement Engineering", "Hardware-Software Integration Strategy", "Technical event operations"] }
+  ],
+  "work": [
+    {
+      "company": "Sony Semiconductor Solutions",
+      "position": "AI Solutions Engineer / Architect",
+      "location": "Tokyo",
+      "startDate": "2023-01",
+      "endDate": null,
+      "groups": [
+        {
+          "name": "Edge AI Sample Applications",
+          "highlights": [
+            { "text": "Led a **6-engineer team** to develop **9 enterprise-grade Edge AI sample apps**, adopted in exhibitions, national demos, and enterprise briefings.", "tags": ["edge-ai", "team-lead"] },
+            { "text": "Released cross-border OSS project **(Raspberry AI Camera)** in collaboration with Lund (Sweden) and Raspberry Pi Foundation.", "tags": ["oss", "international", "edge-ai"] },
+            { "text": "Improved cloud integration reliability via REST API–based sample apps with Midokura (Spain).", "tags": ["cloud", "international"] }
+          ]
+        },
+        {
+          "name": "Edge–Cloud AI Deployment",
+          "highlights": [
+            { "text": "Led software implementation of distributed AI systems, coordinating **5 engineers and 5 cross-functional members** (sales, electrical, client support).", "tags": ["team-lead", "distributed"] },
+            { "text": "Deployed **multi-camera edge–cloud AI systems (10+ cameras per site)** adapting to bandwidth, device compute limits, and environmental constraints.", "tags": ["edge-ai", "cloud", "distributed"] },
+            { "text": "Delivered AI solutions: vehicle license plate recognition, digital signage impact measurement, shelf vacancy detection, and in-store traffic heatmap visualization.", "tags": ["cv", "solutions"] },
+            { "text": "Enabled enterprise AI engagements across **8+ major clients** (logistics, retail, mobility).", "tags": ["customer", "enterprise"] }
+          ]
+        },
+        {
+          "name": "Generative AI & Engineering Productivity",
+          "highlights": [
+            { "text": "Led development of internal **generative AI MCP server**, building prototypes, demos, and a 5-engineer team to release production-ready OSS code.", "tags": ["genai", "oss", "team-lead"] },
+            { "text": "**Reduced API migration workload by 80%** (V1→V2) using LLM-assisted automation scripts.", "tags": ["genai", "automation"] }
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Sony Semiconductor Solutions",
+      "position": "Edge AI Embedded Engineer",
+      "location": "Tokyo",
+      "startDate": "2020-01",
+      "endDate": "2022-12",
+      "highlights": [
+        { "text": "Developed SDK and first-generation Edge AI demos for Sony's IMX500, supporting enterprise evaluation and adoption.", "tags": ["edge-ai", "embedded"] },
+        { "text": "Served as technical lead for **2 exhibition implementations**, overseeing system deployment, live operation, and on-site client briefings.", "tags": ["team-lead", "customer"] },
+        { "text": "Designed and operated full-stack on-premise camera systems (circuit reviews, SoC research, hardware validation), enabling real-world deployment planning.", "tags": ["embedded", "hardware"] }
+      ]
+    },
+    {
+      "company": "Sony Semiconductor Solutions",
+      "position": "Computer Vision / ML Engineer",
+      "location": "Tokyo",
+      "startDate": "2019-04",
+      "endDate": "2019-12",
+      "highlights": [
+        { "text": "**Pioneered internal ToF ML use case**, independently building **46-class sign language recognition system (98% accuracy, 15 FPS)**; designed depth + facial landmark fusion pipeline from data collection to deployment.", "tags": ["cv", "ml"] },
+        { "text": "**Led ML development** for ToF + RGB 3D pose estimation system showcased at CES.", "tags": ["cv", "ml"] }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Tohoku University",
+      "area": "Robotics",
+      "studyType": "M.S.",
+      "startDate": "2017",
+      "endDate": "2019",
+      "description": "MEMS sensors, semiconductor processes, data utilization, machine learning"
+    },
+    {
+      "institution": "Tohoku University",
+      "area": "Mechanical Engineering",
+      "studyType": "B.S.",
+      "startDate": "2013",
+      "endDate": "2017",
+      "description": "Robot contests, Programming work (particle simulation with C++ & OpenGL), Aerospace/Genetic/Control engineering"
+    }
+  ],
+  "certificates": [
+    { "name": "Google Certified Professional - Cloud Architect", "level": "primary" },
+    { "name": "TensorFlow Developer Certificate",               "level": "primary" },
+    { "name": "AWS Solutions Architect - Associate",            "level": "secondary" },
+    { "name": "Azure AI Engineer Associate",                    "level": "secondary" },
+    { "name": "Registered Information Security Specialist",     "level": "secondary" }
+  ],
+  "awards": [
+    { "title": "SecHack365", "date": "2019", "summary": "NICT-sponsored 1-year security hackathon program. Built Fasttext AI to visualize emotional transitions from Twitter posts. Selected for SXSW (Austin) and won an award at the on-site hackathon." },
+    { "title": "Grand Prize, BIOMD 2015", "summary": "International biomolecular design competition, Harvard University" },
+    { "title": "Third Prize, iCAN'14",    "summary": "Global embedded systems competition – Developed earthquake-responsive bookshelf divider system" },
+    { "title": "Published Papers",        "summary": "Froemel, J., Akita, S., et al. (2020). Micromachines (MDPI). Uchida, T., Akita, S., et al. (2017). Small (Wiley)" }
+  ],
+  "leadership": [
+    { "title": "Founding Member",                "summary": "Whole Brain Architecture Young Researchers (Tohoku Chapter, 2018)" },
+    { "title": "SW Conference/Event Operations", "summary": "SRE NEXT, Open Source Summit Japan, SecHack365" },
+    { "title": "Gemini API Hackathon",           "summary": "Mentor in collaboration with Google AI Student Ambassadors" }
+  ]
+}
