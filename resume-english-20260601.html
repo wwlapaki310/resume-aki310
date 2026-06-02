@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satoru Akita - Resume 20260601</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.4; color: #333; background: #f5f5f5; }
+        .container { max-width: 850px; margin: 20px auto; background: white; padding: 36px 46px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        header { text-align: center; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #2c3e50; }
+        h1 { font-size: 38px; color: #2c3e50; margin-bottom: 6px; }
+        .contact { font-size: 11.5px; color: #555; display: flex; justify-content: center; gap: 13px; flex-wrap: wrap; }
+        .contact a { color: #555; text-decoration: none; }
+        .contact svg { vertical-align: middle; margin-right: 3px; }
+        .content { display: grid; grid-template-columns: 2fr 1fr; gap: 26px; }
+        .section { margin-bottom: 15px; }
+        h2 { font-size: 13px; color: #2c3e50; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1.5px solid #3498db; }
+        .job-group { font-size: 11px; font-weight: bold; color: #2c3e50; margin-top: 5px; margin-bottom: 2px; }
+        .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px; }
+        .job-title { font-size: 12.5px; font-weight: bold; color: #2c3e50; text-decoration: underline; }
+        .job-location { font-size: 9.5px; color: #7f8c8d; font-style: italic; }
+        .job-period { font-size: 9.5px; color: #7f8c8d; white-space: nowrap; }
+        ul { margin-left: 14px; margin-top: 3px; }
+        li { font-size: 10.5pt; margin-bottom: 2px; line-height: 1.35; }
+        .skills-grid { display: grid; grid-template-columns: 1fr; gap: 5px; font-size: 10.5pt; }
+        .skill-category { margin-bottom: 3px; }
+        .skill-category strong { color: #2c3e50; }
+        .right-column { font-size: 10.5pt; }
+        .education-item { margin-bottom: 10px; }
+        .degree { font-weight: bold; color: #2c3e50; font-size: 10.5pt; }
+        .institution { color: #555; font-size: 9.5pt; }
+        .date { color: #7f8c8d; font-size: 8.5pt; font-style: italic; }
+        .cert-item, .award-item { margin-bottom: 6px; line-height: 1.3; font-size: 10.5pt; }
+        @page { size: A4; margin: 5mm 8mm; }
+        @media print {
+            html, body { height: 100%; }
+            body { background: white; }
+            .container { max-width: 100%; margin: 0; padding: 0; box-shadow: none; min-height: 100%; display: flex; flex-direction: column; }
+            .content { flex: 1; gap: 18px; }
+            .section, .job-header, .education-item, .cert-item, .award-item { page-break-inside: avoid; }
+            header { margin-bottom: 10px; padding-bottom: 7px; }
+            h1 { font-size: 28px; }
+            .contact { font-size: 10px; gap: 11px; }
+            h2 { font-size: 11.5px; margin-bottom: 7px; padding-bottom: 4px; }
+            .section { margin-bottom: 10px; }
+            li { font-size: 9.2pt; line-height: 1.35; margin-bottom: 3px; }
+            ul { margin-left: 13px; margin-top: 3px; }
+            .skills-grid { gap: 4px; font-size: 9.2pt; }
+            .skill-category { margin-bottom: 3px; }
+            .job-title { font-size: 11px; }
+            .job-location { font-size: 9px; }
+            .job-period { font-size: 9px; }
+            .job-group { font-size: 10px; margin-top: 6px; margin-bottom: 2px; }
+            .award-item, .cert-item { margin-bottom: 6px; line-height: 1.3; font-size: 9.2pt; }
+            .education-item { margin-bottom: 9px; }
+            .degree { font-size: 10pt; }
+            .institution { font-size: 9pt; }
+            .right-column { font-size: 9.2pt; }
+            .right-column p { margin-bottom: 3px; line-height: 1.28; font-size: 8.8pt; }
+            .job-header { margin-bottom: 3px; }
+            .phase-gap { margin-top: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Satoru Akita</h1>
+            <div class="contact">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#2c3e50"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><a href="mailto:wwlap24@gmail.com">wwlap24@gmail.com</a></span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#2c3e50"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>+81-70-4157-2275</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#2c3e50"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg><a href="https://www.linkedin.com/in/satoru-akita-6070a4145/" target="_blank">satoru-akita-6070a4145</a></span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#2c3e50"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg><a href="https://github.com/wwlapaki310" target="_blank">wwlapaki310</a></span>
+                <span>📝 <a href="https://wwlapaki310.github.io/en/" target="_blank">Blog</a></span>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="left-column">
+                <section class="section">
+                    <h2>Summary</h2>
+                    <ul>
+                        <li>Software Engineer specializing in <strong>edge AI firmware, embedded systems, and IT infrastructure</strong> — full stack from sensor protocol to cloud.</li>
+                        <li>Currently leading embedded FW development for factory AI cameras and driving generative AI adoption — from tool selection to engineering culture — for a new org.</li>
+                        <li>7+ years at Sony Semiconductor: edge AI, computer vision, enterprise AI deployments, and OSS leadership across international partnerships.</li>
+                    </ul>
+                </section>
+
+                <section class="section">
+                    <h2>Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category"><strong>Languages:</strong> Python, C/C++, TypeScript, JavaScript, Bash</div>
+                        <div class="skill-category"><strong>AI / ML:</strong> PyTorch, TensorFlow, OpenCV, Computer Vision, Anomaly Detection, Edge AI</div>
+                        <div class="skill-category"><strong>Cloud &amp; Infra:</strong> Azure, AWS, GCP, Docker, CI/CD, GitHub Actions, MLOps</div>
+                        <div class="skill-category"><strong>Hardware:</strong> Raspberry Pi, IMX500, ESP32, switching hub config, MEMS sensors</div>
+                        <div class="skill-category"><strong>Soft Skills:</strong> Solution scoping, on-site technical diagnosis, HW–SW integration, SW event operations</div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2>Experience</h2>
+
+                    <!-- Phase 4 NEW -->
+                    <div class="job-header">
+                        <div>
+                            <span class="job-title">Senior Software Engineer</span>
+                            <span class="job-location">| Sony Semiconductor Solutions, Tokyo</span>
+                        </div>
+                        <span class="job-period">Apr 2026 – Present</span>
+                    </div>
+                    <ul>
+                        <li>Developing factory AI camera FW with <strong>GenICam</strong>-based frame acquisition, C++ anomaly-detection inference, and <strong>SLMP</strong> result transmission; includes full-stack operator web app</li>
+                        <li>Led evaluation and adoption of <strong>generative AI tools, CI/CD pipelines, remote access infrastructure, and GitHub repository strategy</strong> for a newly formed team</li>
+                    </ul>
+
+                    <!-- Phase 3 -->
+                    <div class="job-header phase-gap">
+                        <div>
+                            <span class="job-title">AI Solutions Engineer / Architect</span>
+                            <span class="job-location">| Sony Semiconductor Solutions, Tokyo</span>
+                        </div>
+                        <span class="job-period">Jan 2023 – Mar 2026</span>
+                    </div>
+                    <p class="job-group">Edge AI Sample Applications</p>
+                    <ul>
+                        <li>Led <strong>6-engineer team</strong> to develop and release <strong>9 OSS Edge AI sample apps</strong>; featured in exhibitions, national project demos, and enterprise briefings across Japan</li>
+                        <li>Drove international OSS collaboration (<strong>Raspberry AI Camera</strong>) with Lund (Sweden), Raspberry Pi Foundation, and Midokura (Spain)</li>
+                    </ul>
+                    <p class="job-group">Edge–Cloud AI Deployment</p>
+                    <ul>
+                        <li>Deployed multi-camera edge–cloud AI systems across <strong>12 customer environments</strong> (10+ cameras/site), coordinating <strong>5 engineers + 5 cross-functional members</strong></li>
+                        <li>Delivered AI solutions for <strong>8+ enterprise clients</strong>: license plate recognition, shelf vacancy detection, traffic heatmaps, digital signage analytics</li>
+                    </ul>
+                    <p class="job-group">Generative AI &amp; Engineering Productivity</p>
+                    <ul>
+                        <li>Led <strong>5-engineer team</strong> to build and OSS-release AITRIOS MCP server; automated ~<strong>80% of API migration work</strong> (V1→V2) via LLM-assisted scripts</li>
+                    </ul>
+
+                    <!-- Phase 2 -->
+                    <div class="job-header phase-gap">
+                        <div>
+                            <span class="job-title">Edge AI Embedded Engineer</span>
+                            <span class="job-location">| Sony Semiconductor Solutions, Tokyo</span>
+                        </div>
+                        <span class="job-period">Jan 2020 – Dec 2022</span>
+                    </div>
+                    <ul>
+                        <li>Developed SDK and first-gen Edge AI demos for Sony's <strong>IMX500</strong>; served as technical lead for <strong>2 exhibition deployments</strong> (system setup, live operation, on-site client briefings)</li>
+                        <li>Designed full-stack on-premise camera systems covering circuit review, SoC research, and HW validation</li>
+                    </ul>
+
+                    <!-- Phase 1 -->
+                    <div class="job-header phase-gap">
+                        <div>
+                            <span class="job-title">Computer Vision / ML Engineer</span>
+                            <span class="job-location">| Sony Semiconductor Solutions, Tokyo</span>
+                        </div>
+                        <span class="job-period">Apr 2019 – Dec 2019</span>
+                    </div>
+                    <ul>
+                        <li>Independently built <strong>46-class sign language recognition (98% accuracy, 15 FPS)</strong> using ToF + facial landmark fusion — data collection to deployment</li>
+                        <li>Led ML dev of ToF+RGB 3D pose estimation; <strong>exhibited at CES 2019</strong></li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="right-column">
+                <section class="section">
+                    <h2>Education</h2>
+                    <div class="education-item">
+                        <div class="degree">M.S. in Robotics</div>
+                        <div class="institution">Tohoku University <span class="date">2017–2019</span></div>
+                        <p style="margin-top: 3px;">MEMS sensors, semiconductor processes, data utilization, machine learning</p>
+                    </div>
+                    <div class="education-item">
+                        <div class="degree">B.Eng. in Mechanical Engineering</div>
+                        <div class="institution">Tohoku University <span class="date">2013–2017</span></div>
+                        <p style="margin-top: 3px;">Molecular robotics (DNA nanotechnology); published in <em>Small</em> (2017); robot contests, particle simulation (C++ / OpenGL)</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2>Certifications</h2>
+                    <div class="cert-item"><strong>Google Certified Professional – Cloud Architect</strong></div>
+                    <div class="cert-item"><strong>TensorFlow Developer Certificate</strong></div>
+                    <div class="cert-item">AWS Solutions Architect – Associate</div>
+                    <div class="cert-item">Azure AI Engineer Associate</div>
+                    <div class="cert-item">Registered Information Security Specialist (Japan)</div>
+                </section>
+
+                <section class="section">
+                    <h2>Awards &amp; Publications</h2>
+                    <div class="award-item">
+                        <strong>SecHack365 (2019)</strong><br>
+                        NICT-sponsored 365-day security hackathon. Built Fasttext AI to visualize emotional transitions in Twitter data. Selected for SXSW (Austin) — won corporate prize at on-site hackathon.
+                    </div>
+                    <div class="award-item">
+                        <strong>Grand Prize, BIOMD 2015</strong><br>
+                        International biomolecular design competition, Harvard University
+                    </div>
+                    <div class="award-item">
+                        <strong>3rd Place Worldwide, iCAN'14</strong><br>
+                        International embedded systems competition
+                    </div>
+                    <div class="award-item">
+                        <strong>Publications:</strong><br>
+                        Froemel, Akita et al. <em>Micromachines</em> (2020)<br>
+                        Uchida, Akita et al. <em>Small</em> (2017)
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2>Leadership &amp; Community</h2>
+                    <div class="award-item">
+                        <strong>SW Event Operations</strong> — SRE NEXT, Open Source Summit Japan, SecHack365
+                    </div>
+                    <div class="award-item">
+                        <strong>Gemini API Hackathon Mentor</strong> — Google AI Student Ambassadors
+                    </div>
+                    <div class="award-item">
+                        <strong>Founding Member</strong> — Whole Brain Architecture Young Researchers (Tohoku Chapter, 2018)
+                    </div>
+                    <div class="award-item">
+                        <strong>Hackathon Enthusiast</strong> — Participant across domains incl. humanoid robotics, edge AI, mobile apps, NASA Space Apps Challenge, OpenCV AI competition
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
