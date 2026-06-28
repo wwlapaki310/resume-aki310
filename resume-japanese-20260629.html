@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秋田 賢 - 履歴書（Developer Advocate）</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; line-height: 1.4; color: #333; background: #f5f5f5; }
+        .container { max-width: 850px; margin: 20px auto; background: white; padding: 36px 46px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        header { text-align: center; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #2c3e50; }
+        h1 { font-size: 36px; color: #2c3e50; margin-bottom: 6px; }
+        .contact { font-size: 11.5px; color: #555; display: flex; justify-content: center; gap: 13px; flex-wrap: wrap; }
+        .contact a { color: #555; text-decoration: none; }
+        .contact svg { vertical-align: middle; margin-right: 3px; }
+        .content { display: grid; grid-template-columns: 2fr 1fr; gap: 26px; }
+        .section { margin-bottom: 15px; }
+        h2 { font-size: 13px; color: #2c3e50; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1.5px solid #3498db; }
+        .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px; }
+        .job-title { font-size: 12.5px; font-weight: bold; color: #2c3e50; text-decoration: underline; }
+        .job-location { font-size: 9.5px; color: #7f8c8d; font-style: italic; }
+        .job-period { font-size: 9.5px; color: #7f8c8d; white-space: nowrap; }
+        ul { margin-left: 14px; margin-top: 4px; }
+        li { font-size: 10.5pt; margin-bottom: 2px; line-height: 1.35; }
+        .skills-grid { display: grid; grid-template-columns: 1fr; gap: 5px; font-size: 10.5pt; }
+        .skill-category { margin-bottom: 3px; }
+        .skill-category strong { color: #2c3e50; }
+        .right-column { font-size: 10.5pt; }
+        .education-item { margin-bottom: 10px; }
+        .degree { font-weight: bold; color: #2c3e50; font-size: 10.5pt; }
+        .institution { color: #555; font-size: 9.5pt; }
+        .date { color: #7f8c8d; font-size: 8.5pt; font-style: italic; }
+        .cert-item, .award-item { margin-bottom: 6px; line-height: 1.3; font-size: 10.5pt; }
+        @page { size: A4; margin: 5mm 8mm; }
+        @media print {
+            html, body { height: 100%; }
+            body { background: white; }
+            .container { max-width: 100%; margin: 0; padding: 0; box-shadow: none; min-height: 100%; display: flex; flex-direction: column; }
+            .content { flex: 1; gap: 14px; }
+            .section, .job-header, .education-item, .cert-item, .award-item { page-break-inside: avoid; }
+            header { margin-bottom: 7px; padding-bottom: 5px; }
+            h1 { font-size: 26px; }
+            .contact { font-size: 9.5px; gap: 9px; }
+            h2 { font-size: 11px; margin-bottom: 5px; padding-bottom: 3px; }
+            .section { margin-bottom: 6px; }
+            li { font-size: 8.5pt; line-height: 1.22; margin-bottom: 1px; }
+            ul { margin-left: 11px; margin-top: 2px; }
+            .skills-grid { gap: 2px; font-size: 8.5pt; }
+            .skill-category { margin-bottom: 1px; }
+            .job-title { font-size: 10.5px; }
+            .job-location { font-size: 8.5px; }
+            .job-period { font-size: 8.5px; }
+            .award-item, .cert-item { margin-bottom: 3px; line-height: 1.18; font-size: 8.5pt; }
+            .education-item { margin-bottom: 5px; }
+            .degree { font-size: 9pt; }
+            .institution { font-size: 8.5pt; }
+            .right-column { font-size: 8.5pt; }
+            .right-column p { margin-bottom: 1px; line-height: 1.15; font-size: 8pt; }
+            .job-header { margin-bottom: 1px; }
+            .phase-gap { margin-top: 7px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>秋田 賢 (Satoru Akita)</h1>
+            <div class="contact">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#2c3e50"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><a href="mailto:wwlap24@gmail.com">wwlap24@gmail.com</a></span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#2c3e50"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>+81-70-4157-2275</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#2c3e50"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg><a href="https://www.linkedin.com/in/satoru-akita-6070a4145/" target="_blank">satoru-akita-6070a4145</a></span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#2c3e50"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg><a href="https://github.com/wwlapaki310" target="_blank">wwlapaki310</a></span>
+                <span>📝 <a href="https://wwlapaki310.github.io/en/" target="_blank">技術ブログ (55本以上)</a></span>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="left-column">
+                <section class="section">
+                    <h2>サマリー</h2>
+                    <ul>
+                        <li>ソニーセミコンダクタ7年間でエッジAI・エンタープライズAI・生成AI基盤まで一貫して開発し、<strong>OSSリリース・技術ブログ・カンファレンス運営</strong>で日本のエンジニアコミュニティに継続貢献。</li>
+                        <li>18歳からの国際コンテスト入賞・ハッカソン多数参加・SecHack365修了・Gemini APIハッカソンメンターを通じ、<strong>技術コミュニティとの双方向な関与</strong>を実践。</li>
+                        <li>日本語・英語でのバイリンガル技術発信力を持ち、<strong>AIシステムの実務経験とデベロッパーエコシステムへの知見</strong>を両立。</li>
+                    </ul>
+                </section>
+
+                <section class="section">
+                    <h2>スキル</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category"><strong>言語:</strong> Python, C/C++, TypeScript, JavaScript, Bash</div>
+                        <div class="skill-category"><strong>AI/ML:</strong> PyTorch, TensorFlow, OpenCV, コンピュータビジョン, 異常検知, エッジAI</div>
+                        <div class="skill-category"><strong>GenAI / LLM:</strong> Gemini API, Claude API, OpenAI API, LangChain, MCPフレームワーク, RAG, マルチモーダル</div>
+                        <div class="skill-category"><strong>クラウド・インフラ:</strong> Azure, AWS, GCP, Docker, CI/CD, GitHub Actions</div>
+                        <div class="skill-category"><strong>ソフトスキル:</strong> 技術コンテンツ制作, デベロッパーコミュニティ運営, バイリンガル技術発信（日英）</div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2>職務経歴</h2>
+
+                    <!-- Phase 4 最新 -->
+                    <div class="job-header">
+                        <div>
+                            <span class="job-title">シニアソフトウェアエンジニア</span>
+                            <span class="job-location">| ソニーセミコンダクタソリューションズ株式会社, 東京</span>
+                        </div>
+                        <span class="job-period">2026年4月 – 現在</span>
+                    </div>
+                    <ul>
+                        <li><strong>工場向けAIカメラFW開発</strong>：GenICamによるフレーム取得・C++異常検知AI推論・SLMPでのPLC連携を実装、操作用WebアプリをフルスタックC++/Webで構築</li>
+                        <li><strong>新組織のIT基盤構築・生成AI推進を主導</strong>：生成AIツール選定・CI/CD環境・リモートアクセス基盤・GitHubリポジトリ戦略を調査・提案し、順次導入を推進</li>
+                    </ul>
+
+                    <!-- Phase 3 -->
+                    <div class="job-header phase-gap">
+                        <div>
+                            <span class="job-title">AIソリューションアーキテクト</span>
+                            <span class="job-location">| ソニーセミコンダクタソリューションズ株式会社, 東京</span>
+                        </div>
+                        <span class="job-period">2023年1月 – 2026年3月</span>
+                    </div>
+                    <ul>
+                        <li><strong>6名チームリードでEdge AIサンプルアプリ9本をOSS公開</strong>。展示会・国家プロジェクトデモ・エンタープライズブリーフィング計10件以上で紹介・デモ実施</li>
+                        <li><strong>12顧客環境にマルチカメラエッジAIを展開</strong>（8社以上のエンタープライズ顧客、倉庫/製造/小売など多業種）</li>
+                        <li><strong>AITRIOS MCPサーバをOSS公開（5名チームリード）</strong>：LLMエージェントがエッジAI APIと連携可能なデベロッパーツールを開発；LLMによりAPI移行作業の約80%を自動化</li>
+                    </ul>
+
+                    <!-- Phase 2 -->
+                    <div class="job-header phase-gap">
+                        <div>
+                            <span class="job-title">エッジAI組み込みエンジニア</span>
+                            <span class="job-location">| ソニーセミコンダクタソリューションズ株式会社, 東京</span>
+                        </div>
+                        <span class="job-period">2020年1月 – 2022年12月</span>
+                    </div>
+                    <ul>
+                        <li><strong>IMX500（ソニー初AIイメージセンサ）のSDK・デモアプリを開発</strong>し、展示会2件で技術リードとして運用・顧客対応を担当</li>
+                        <li>フルスタックのオンプレミスカメラシステムを設計（回路レビュー・SoC調査・HW検証）</li>
+                    </ul>
+
+                    <!-- Phase 1 -->
+                    <div class="job-header phase-gap">
+                        <div>
+                            <span class="job-title">コンピュータビジョン / MLエンジニア</span>
+                            <span class="job-location">| ソニーセミコンダクタソリューションズ株式会社, 東京</span>
+                        </div>
+                        <span class="job-period">2019年4月 – 2019年12月</span>
+                    </div>
+                    <ul>
+                        <li><strong>46クラス手話認識（精度98%, 15FPS）を単独構築</strong>；ToF＋顔ランドマーク融合パイプラインをデータ収集からデプロイまで一貫開発</li>
+                        <li><strong>ToF+RGB 3D姿勢推定のML開発をリード、CESで展示</strong></li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="right-column">
+                <section class="section">
+                    <h2>学歴</h2>
+                    <div class="education-item">
+                        <div class="degree">工学修士（ロボティクス）</div>
+                        <div class="institution">東北大学 <span class="date">2017–2019年</span></div>
+                        <p style="margin-top: 3px; font-size: 8.5pt;">MEMSセンサ・半導体プロセス・データ活用・機械学習</p>
+                    </div>
+                    <div class="education-item">
+                        <div class="degree">工学士（機械工学）</div>
+                        <div class="institution">東北大学 <span class="date">2013–2017年</span></div>
+                        <p style="margin-top: 3px; font-size: 8.5pt;">分子ロボティクス（DNA nanotechnology）/ Small誌掲載</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2>コミュニティ活動</h2>
+                    <div class="award-item">
+                        <strong>技術ブログ</strong> — AI・組み込み・開発ツールに関する<a href="https://wwlapaki310.github.io/en/">記事55本以上</a>を日英で執筆・公開
+                    </div>
+                    <div class="award-item">
+                        <strong>Gemini APIハッカソン メンター</strong> — Google AI学生アンバサダープログラム連携
+                    </div>
+                    <div class="award-item">
+                        <strong>SW カンファレンス スタッフ</strong> — SRE NEXT・Open Source Summit Japan（NOC・会場運営・スピーカーサポート）
+                    </div>
+                    <div class="award-item">
+                        <strong>SecHack365 修了・招待講演</strong> — NICT主催365日セキュリティプログラム（2019）修了後、後続コホートへ招待講演
+                    </div>
+                    <div class="award-item">
+                        <strong>全脳アーキテクチャ若手の会 東北支部</strong> — 立ち上げメンバー・運営（2018年）
+                    </div>
+                    <div class="award-item">
+                        <strong>ハッカソン多数参加</strong> — NASA Space Apps Challenge, OpenCV AI Competition, ヒューマノイドロボット, エッジAI, モバイルアプリ など10件以上
+                    </div>
+                    <div class="award-item">
+                        <strong>メルカリ エンジニアリング インターン</strong>（2017年）
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2>資格</h2>
+                    <div class="cert-item"><strong>Google Cloud Certified – Professional Cloud Architect</strong></div>
+                    <div class="cert-item"><strong>TensorFlow Developer Certificate</strong></div>
+                    <div class="cert-item">AWS Solutions Architect – Associate</div>
+                    <div class="cert-item">Azure AI Engineer Associate</div>
+                    <div class="cert-item">情報処理安全確保支援士</div>
+                </section>
+
+                <section class="section">
+                    <h2>受賞・発表</h2>
+                    <div class="award-item">
+                        <strong>グランプリ, BIOMOD 2015</strong> — 国際生体分子設計コンペ（ハーバード大学）
+                    </div>
+                    <div class="award-item">
+                        <strong>世界3位, iCAN'14</strong> — 国際組み込みシステムコンペ（18歳）
+                    </div>
+                    <div class="award-item">
+                        <strong>論文:</strong> Micromachines (2020), Small (2017)
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
